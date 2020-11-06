@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RazorpayController;
 
-Route::get('paywithrazorpay', [RazorpayController::class,'payWithRazorpay'])->name('paywithrazorpay');
+Route::get('/', [RazorpayController::class,'payWithRazorpay'])->name('paywithrazorpay');
 Route::post('payment', [RazorpayController::class,'payment'])->name('payment');
 
 /*
@@ -17,6 +17,4 @@ Route::post('payment', [RazorpayController::class,'payment'])->name('payment');
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
